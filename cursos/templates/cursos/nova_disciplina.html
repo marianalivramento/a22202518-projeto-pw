@@ -1,0 +1,23 @@
+{% extends 'cursos/layout.html' %}
+
+
+{% block content %}
+
+    <style>
+        .errorlist {
+            display: none;
+        }
+    </style>
+
+
+    <h3>Nova Disiciplina</h3>
+
+    <form action="" method="post" enctype='multipart/form-data'>
+      {% csrf_token %}
+      <table>
+          {{ form.as_table }}   <!-- insere input para cada atributo da classe Autor, numa tabela -->
+      </table>
+      <input type="submit" value = "Cria Disciplina">
+    </form>
+
+{% endblock %}

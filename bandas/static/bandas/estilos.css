@@ -1,0 +1,12 @@
+body {
+    background: palevioletred;
+    color: white;
+}
+
+h1 {
+    color: pink;
+}
+.errorlist {
+    display:none;
+}
+

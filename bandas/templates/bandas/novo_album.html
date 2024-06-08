@@ -1,0 +1,15 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <h3>Novo Album</h3>
+
+    <form action="" method="post" enctype='multipart/form-data'>
+      {% csrf_token %}
+      <table>
+          {{ form }}   <!-- insere input para cada atributo da classe Autor, numa tabela -->
+      </table>
+      <input type="submit">
+    </form>
+
+{% endblock %}
+

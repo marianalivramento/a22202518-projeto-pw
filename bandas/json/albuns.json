@@ -1,0 +1,151 @@
+[
+    {
+        "banda": "Backstreet Boys",
+        "albums": [
+            {
+                "nome_album": "Backstreet Boys",
+                "ano_de_lancamento": 1996,
+                "musicas": [
+                    {"nome_musica": "Quit Playing Games (With My Heart)", "duracao": 230,"ano_de_lancamento": 1996},
+                    {"nome_musica": "As Long as You Love Me", "duracao": 231, "ano_de_lancamento": 1996},
+                    {"nome_musica": "All I Have to Give", "duracao": 213, "ano_de_lancamento": 1996},
+                    {"nome_musica": "I'll Never Break Your Heart", "duracao": 255, "ano_de_lancamento": 1996}
+                ]
+            },
+            {
+                "nome_album": "Millennium",
+                "ano_de_lancamento": 1999,
+                "musicas": [
+                    {"nome_musica": "I Want It That Way", "duracao": 213, "ano_de_lancamento": 1999},
+                    {"nome_musica": "Show Me the Meaning of Being Lonely", "duracao": 231, "ano_de_lancamento": 1999},
+                    {"nome_musica": "The One", "duracao": 255, "ano_de_lancamento": 1999},
+                    {"nome_musica": "Larger than Life", "duracao": 235, "ano_de_lancamento": 1999}
+                ]
+            }
+        ]
+    },
+    {
+        "banda": "Spice Girls",
+        "albums": [
+            {
+                "nome_album": "Spice",
+                "ano_de_lancamento": 1996,
+                "musicas": [
+                    {"nome_musica": "Wannabe", "duracao": 191, "ano_de_lancamento": 1996},
+                    {"nome_musica": "Say You'll Be There", "duracao": 228, "ano_de_lancamento": 1996},
+                    {"nome_musica": "2 Become 1", "duracao": 257, "ano_de_lancamento": 1996},
+                    {"nome_musica": "Who Do You Think You Are", "duracao": 223, "ano_de_lancamento": 1996}
+                ]
+            },
+            {
+                "nome_album": "Spiceworld",
+                "ano_de_lancamento": 1997,
+                "musicas": [
+                    {"nome_musica": "Spice Up Your Life", "duracao": 245, "ano_de_lancamento": 1997},
+                    {"nome_musica": "Too Much", "duracao": 250, "ano_de_lancamento": 1997},
+                    {"nome_musica": "Viva Forever", "duracao": 279, "ano_de_lancamento": 1997},
+                    {"nome_musica": "Stop", "duracao": 214, "ano_de_lancamento": 1997}
+                ]
+            }
+        ]
+    },
+    {
+        "banda": "NSYNC",
+        "albums": [
+            {
+                "nome_album": "'N Sync",
+                "ano_de_lancamento": 1997,
+                "musicas": [
+                    {"nome_musica": "Tearin' Up My Heart", "duracao": 214, "ano_de_lancamento": 1997},
+                    {"nome_musica": "I Want You Back", "duracao": 201, "ano_de_lancamento": 1997},
+                    {"nome_musica": "God Must Have Spent a Little More Time on You", "duracao": 270, "ano_de_lancamento": 1997},
+                    {"nome_musica": "Here We Go", "duracao": 225, "ano_de_lancamento": 1997}
+                ]
+            },
+            {
+                "nome_album": "No Strings Attached",
+                "ano_de_lancamento": 2000,
+                "musicas": [
+                    {"nome_musica": "Bye Bye Bye", "duracao": 193, "ano_de_lancamento": 2000},
+                    {"nome_musica": "It's Gonna Be Me", "duracao": 190, "ano_de_lancamento": 2000},
+                    {"nome_musica": "This I Promise You", "duracao": 268, "ano_de_lancamento": 2000},
+                    {"nome_musica": "Digital Get Down", "duracao": 240, "ano_de_lancamento": 2000}
+                ]
+            }
+        ]
+    },
+    {
+        "banda": "Destiny's Child",
+        "albums": [
+            {
+                "nome_album": "Destiny's Child",
+                "ano_de_lancamento": 1998,
+                "musicas": [
+                    {"nome_musica": "No, No, No", "duracao": 234, "ano_de_lancamento": 1998},
+                    {"nome_musica": "With Me Part I", "duracao": 213, "ano_de_lancamento": 1998},
+                    {"nome_musica": "With Me Part II", "duracao": 211, "ano_de_lancamento": 1998},
+                    {"nome_musica": "Get on the Bus", "duracao": 252, "ano_de_lancamento": 1998}
+                ]
+            },
+            {
+                "nome_album": "The Writing's on the Wall",
+                "ano_de_lancamento": 1999,
+                "musicas": [
+                    {"nome_musica": "Bills, Bills, Bills", "duracao": 213, "ano_de_lancamento": 1999},
+                    {"nome_musica": "Bug a Boo", "duracao": 238, "ano_de_lancamento": 1999},
+                    {"nome_musica": "Say My Name", "duracao": 243, "ano_de_lancamento": 1999},
+                    {"nome_musica": "Jumpin', Jumpin'", "duracao": 250, "ano_de_lancamento": 1999}
+                ]
+            }
+        ]
+    },
+    {
+        "banda": "Westlife",
+        "albums": [
+            {
+                "nome_album": "Westlife",
+                "ano_de_lancamento": 1999,
+                "musicas": [
+                    {"nome_musica": "Swear It Again", "duracao": 245, "ano_de_lancamento": 1999},
+                    {"nome_musica": "If I Let You Go", "duracao": 232, "ano_de_lancamento": 1999},
+                    {"nome_musica": "Flying Without Wings", "duracao": 229, "ano_de_lancamento": 1999},
+                    {"nome_musica": "Fool Again", "duracao": 213, "ano_de_lancamento": 1999}
+                ]
+            },
+            {
+                "nome_album": "Coast to Coast",
+                "ano_de_lancamento": 2000,
+                "musicas": [
+                    {"nome_musica": "My Love", "duracao": 220, "ano_de_lancamento": 2000},
+                    {"nome_musica": "What Makes a Man", "duracao": 248, "ano_de_lancamento": 2000},
+                    {"nome_musica": "I Lay My Love on You", "duracao": 235, "ano_de_lancamento": 2000},
+                    {"nome_musica": "Queen of My Heart", "duracao": 259, "ano_de_lancamento": 2000}
+                ]
+            }
+        ]
+    },
+    {
+        "banda": "S Club 7",
+        "albums": [
+            {
+                "nome_album": "S Club",
+                "ano_de_lancamento": 1999,
+                "musicas": [
+                    {"nome_musica": "Bring It All Back", "duracao": 214, "ano_de_lancamento": 1999},
+                    {"nome_musica": "You're My Number One", "duracao": 221, "ano_de_lancamento": 1999},
+                    {"nome_musica": "Two in a Million", "duracao": 246, "ano_de_lancamento": 1999},
+                    {"nome_musica": "S Club Party", "duracao": 238, "ano_de_lancamento": 1999}
+                ]
+            },
+            {
+                "nome_album": "7",
+                "ano_de_lancamento": 2000,
+                "musicas": [
+                    {"nome_musica": "Reach", "duracao": 238, "ano_de_lancamento": 2000},
+                    {"nome_musica": "Natural", "duracao": 220, "ano_de_lancamento": 2000},
+                    {"nome_musica": "Never Had a Dream Come True", "duracao":220, "ano_de_lancamento": 2000}
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,12 @@
+{% extends 'artigos/layout.html' %}
+
+{% block content %}
+
+    <h3>Autores:</h3>
+
+    {% for autor in autores %}
+        <li><a href="{% url 'artigos:autor' autor.id %}">{{autor.nome}}</a></li>
+    {% endfor %}
+
+
+{% endblock %}

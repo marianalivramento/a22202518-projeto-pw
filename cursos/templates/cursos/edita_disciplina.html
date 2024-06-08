@@ -1,0 +1,26 @@
+{% extends 'cursos/layout.html' %}
+
+{% block content %}
+
+    <style>
+        .errorlist = {
+            display = none;
+        }
+    </style>
+
+    <h3>Edita Autor</h3>
+
+    <form action="{% url 'curso:edita_disciplina' disciplina.id %}" method="post" enctype='multipart/form-data'>
+      {% csrf_token %}
+      <table>
+          {{ form }}
+      </table>
+      <input type="submit">
+    </form>
+
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'curso:nova_linguagem' %}"><button>Adicione Linguagem</button></a>
+    {% endif %}
+
+
+{% endblock %}

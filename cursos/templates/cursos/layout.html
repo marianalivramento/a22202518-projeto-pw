@@ -1,0 +1,41 @@
+<html>
+    {% if request.user.is_authenticated %}
+    <head>
+        <title>Engenharia Informática</title>
+        <link rel="stylesheet" href="/static/curso/estilos2.css">
+        <script src="https://kit.fontawesome.com/9ac24875f9.js" crossorigin="anonymous"></script>
+
+
+        <style>
+            {% block style %}
+            {% endblock %}
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <h2>Universidade Lusófona</h2>
+            <div class = "buttons">
+                <a href = "{% url 'curso:index' %}"><button>Home</button></a>
+                <a href = "{% url 'curso:contactos' %}"><button>Contactos</button>
+                <a href="https://informatica.ulusofona.pt"><button>Departamento</button></a>
+            </div>
+        </header>
+
+        {%comment%}
+        {% if request.user.is_authenticated %}
+                    Username:{{request.user.username}}
+                    <a href="{% url 'curso:logout' %}"><button>Logout</button></a>
+                {% else %}
+                    <a href="{% url 'autenticacao:login' %}"><button>Login</button></a>
+                    <a href="{% url 'autenticacao:registo' %}"><button>Registar</button></a>
+                {% endif %}
+        {%endcomment%}
+
+
+        {% block content %}
+        {% endblock %}
+
+    </body>
+    {%endif%}
+</html>

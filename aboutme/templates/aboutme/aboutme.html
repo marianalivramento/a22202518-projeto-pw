@@ -1,0 +1,98 @@
+<html>
+    {% if request.user.is_authenticated %}
+    <head>
+        <title>About me</title>
+        <link rel="stylesheet" href="/static/aboutme/estilos2.css">
+
+        <style>
+            {% block style %}
+            {% endblock %}
+        </style>
+    </head>
+    <body class= "grid">
+
+        <main>
+            <a href="{% url 'main:index' %}"><button>Back to Menu</button></a>
+
+            <div id="imagem-m">
+                <img src="/media/heropage_fotos/me.png" width = "300px">
+            </div>
+
+            <div class="barra"></div>
+
+            <div>
+                <p><b>Name:</b> Mariana</p>
+                <p><b>Country:</b> Portugal</p>
+                <p><b>Level</b> = 23</p>
+            </div>
+
+        </main>
+        <nav>
+
+            <div class="box">
+                <center><b>About me</b></center>
+                <p>I'm on my second year of my bachelor's degree in computer engineering at Universidade Lusófona in Portugal.
+                I'm currently interested on web and iOS development</p>
+            </div>
+
+
+            <div class="box">
+                <center><b>Skill</b></center>
+
+            </div>
+
+            <div class="box">
+                <center><b>Education</b></center>
+                    <b>Universidade Lusófona</b>
+                    BS Computer Engineering
+                    2025
+            </div>
+
+        </nav>
+        <aside>
+
+            <div class="box">
+                <center><b>Projects</b></center>
+                Some Projects i've done:
+
+                <div class="project">
+                    <div id="iphone">
+                        <img src="/media/aboutme_fotos/iphone1.png" width = "100px">
+                        <img src="/media/aboutme_fotos/iphone2.png" width = "100px">
+                    </div>
+
+                    <div class="description">
+                        <h3>BookWorm</h3>
+                        <p>iOs App that let's  you keep track of the books you've read, leaving comments and ratings</p>
+                    </div>
+                </div>
+
+
+
+                <div class="project">
+                    <img src="/media/aboutme_fotos/sour-milk.png" width = "150px">
+
+                    <div class="description">
+                        <h3>SourMilk</h3>
+                        <p>iOs App that keeps track of the expiration date of your groceries, alerting the user once the date is close</p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="/media/aboutme_fotos/deisi-chess.png" width = "150px">
+
+                    <div>
+                        <h3>DEISI Chess</h3>
+                        <p>Chess game with an extra set of pieces with unique move-sets</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+    </body>
+    {% endif %}
+</html>

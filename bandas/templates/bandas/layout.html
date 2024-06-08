@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Web Programming Repository</title>
+        <link rel="stylesheet" href="/static/bandas/estilos.css">
+        <script src="https://kit.fontawesome.com/9ac24875f9.js" crossorigin="anonymous"></script>
+
+
+        <style>
+            {% block style %}
+            {% endblock %}
+        </style>
+    </head>
+    <body>
+
+
+        <div class = "grid">
+
+            {% block content %}
+            {% endblock %}
+
+
+            <footer>
+                <div class="bar">
+                    <div class = "space">
+                        <b><em> <img src="/media/main/windows.png" width = "20px"> Start</em></b>
+                        <div class= "tempo">
+                            {% for i in frases.data %}
+                                {% if i.idWeatherType == previsao.data.0.idWeatherType %}
+                                    <img src="/static/meteo/icons_ipma_weather/w_ic_d_0{{i.idWeatherType}}.svg" width ="30px">
+                                {% endif %}
+                            {% endfor %}
+
+                            <p>{{ previsao.data.0.forecastDate}}</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </body>
+</html>
+

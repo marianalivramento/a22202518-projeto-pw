@@ -1,0 +1,30 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <header>
+        <h1>{{ banda.nome_banda }}</h1>
+    </header>
+    <main>
+        <div class="banda-details">
+            <img src="{{ banda.foto.url }}" width="200px">
+            <div class="banda-info">
+                <p><strong>Nacionalidade:</strong> {{ banda.nacionalidade }}</p>
+                <p><strong>Ano de Criação:</strong> {{ banda.ano_de_criacao }}</p>
+                <p><strong>Estilo:</strong> {{ banda.estilo }}</p>
+            </div>
+        </div>
+
+        <div class="albuns">
+            <h2>Álbuns</h2>
+            <ul>
+                {% for album in banda.albuns.all %}
+                    <li class="album-item">
+                        <i class="fa-solid fa-folder fa-xl" style="color: #f5d465;"></i>
+                        <a href="{% url 'bandas:album' album.id %}">{{ album.nome_album }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+    <aside></aside>
+{% endblock %}

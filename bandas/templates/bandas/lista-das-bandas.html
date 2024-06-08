@@ -1,0 +1,31 @@
+{% extends 'bandas/layout.html' %}
+
+
+{% block content %}
+
+        <header>
+            <h1 class="home-text">My bands</h1>
+        </header>
+
+
+        <main>
+            {% for banda in bandas %}
+                <ul class = "fa-solid fa-folder fa-xl" style="color: #f5d465;">
+                    <a href="{% url 'bandas:banda' banda.id %}">{{ banda }}</a>
+                </ul>
+            {% endfor %}
+        </main>
+
+
+{% comment %}
+
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'bandas:nova_banda' %}">
+                <button>Inserir novo Banda</button>
+            </a>
+        {% endif %}
+
+{% endcomment %}
+
+{% endblock %}
+

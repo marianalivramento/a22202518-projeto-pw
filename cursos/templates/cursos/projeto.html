@@ -1,0 +1,40 @@
+{% extends 'cursos/layout.html' %}
+
+{% block content %}
+
+    <center><h2>{{ projeto.nome_do_projeto }}</h2></center>
+
+    <div class = "contentor">
+        <main>
+            <p id="projeto-disciplina">{{ projeto.descricao }}</p>
+        </main>
+
+        <nav>
+            <div class = "nav-box2">
+                <img class= "imagem" src='{{ projeto.imagem.url }}' width="200px">
+
+            </div>
+        </nav>
+
+        <aside>
+            <div class = "aside-box2">
+                <h3>Conceitos Aplicados</h3>
+                <p>{{ projeto.conceitos_aplicados|safe|linebreaksbr }}</p>
+
+                <h3>Tecnologias</h3>
+                <p>{{ projeto.tecnologias_usadas|safe|linebreaksbr }}</p>
+            </div>
+        </aside>
+    </div>
+
+
+    {% comment %}
+
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'curso:apaga_projeto' projeto.id %}"><button>Apagar Projeto</button></a>
+        <a href="{% url 'curso:edita_projeto' projeto.id %}"><button>Editar Projeto</button></a>
+    {% endif %}
+
+    {% endcomment %}
+
+{% endblock %}

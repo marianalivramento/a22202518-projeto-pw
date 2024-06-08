@@ -1,0 +1,14 @@
+{% extends 'artigos/layout.html' %}
+
+{% block content %}
+    <h2>{{ review.artigo }}</h2>
+    <p>{{ review.preview_review }}</p>
+
+    <p>Rating: {{ review.numero }} <i class="fa-solid fa-star" style="color: #ffbb00;"></i></p>
+
+    <p>De: <a href ="{% url 'artigos:utilizador' review.utilizador.id %}">{{ review.utilizador.nome }}</a></p>
+
+    {{ review.texto }}
+
+
+{% endblock %}

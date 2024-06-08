@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+
+{% block content %}
+
+        <main>
+            <img src="/media/banda_fotos/player.png" width = "600px">
+        </main>
+
+
+
+{% comment %}
+
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'bandas:nova_banda' %}">
+                <button>Inserir novo Banda</button>
+            </a>
+        {% endif %}
+
+{% endcomment %}
+
+{% endblock %}
+

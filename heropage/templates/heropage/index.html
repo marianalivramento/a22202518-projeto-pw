@@ -1,0 +1,38 @@
+<html>
+    {% if request.user.is_authenticated %}
+    <head>
+        <title>HeroPage</title>
+        <link rel="stylesheet" href="/static/heropage/estilos2.css">
+        <style>
+            {% block style %}
+            {% endblock %}
+        </style>
+    </head>
+    <body>
+
+
+    <div class ="title">
+        Mariana's Apartment<div class="dot">.</div>
+    </div>
+
+    <div id="entrance">
+        <p>Hi there! Ring the bell if you would like to pay me a visit</p>
+            <a href="{% url 'main:index' %}">
+                <img id="bell" src="/media/heropage_fotos/bell.png" width ="100px">
+            </a>
+
+    </div>
+
+
+    </body>
+    {% endif %}
+</html>
+
+
+
+
+
+
+
+
+

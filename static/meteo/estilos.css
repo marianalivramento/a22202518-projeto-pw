@@ -1,0 +1,33 @@
+body {
+    background-image: url("/media/main/peanut.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+* {
+    font-family: "Helvetica Neue";
+}
+
+.tempo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    flex-direction: column;
+}
+
+.box {
+    display:flex;
+    align-items: center;
+
+    padding: 30px;
+    gap: 30px;
+
+}
+
+.box > button {
+    padding: 20px;
+    font-size: 15px;
+    border-radius: 15px;
+
+}

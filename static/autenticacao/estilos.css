@@ -1,0 +1,118 @@
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2012/03/04/00/01/background-21717_1280.jpg");
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+* {
+    font-family: "Helvetica Neue";
+}
+
+h1 {
+   font-size: 4em;
+}
+
+.center-text {
+    text-align: center;
+}
+
+
+.titulos {
+    font-weight: bold;
+    font-size: 10em;
+    color: pink;
+
+}
+
+.errorlist {
+    display:none;
+}
+
+#unico {
+    color:pink;
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.element {
+    padding: 20px;
+}
+
+.blue-bar{
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 30;
+    background: linear-gradient(to right, green 10%, blue 10%, blue 100%);
+
+}
+
+
+.space {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 30px;
+    align-items: center;
+}
+
+.tempo {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+    padding: 20px;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.space {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 30px;
+    align-items: center;
+}
+
+.tempo {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+
+.grid {
+    display: grid;
+    height: auto;
+
+    grid-template-areas:
+        'header header header'
+        'main    main  aside'
+        'footer footer footer';
+
+    gap: 10px;
+
+
+    grid-template-columns: 1fr 200px 1fr;
+    grid-template-rows: 150px 500px 150px
+
+}
+
+

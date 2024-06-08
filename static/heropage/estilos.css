@@ -1,0 +1,99 @@
+* {
+    font-family: "Helvetica Neue";
+}
+
+body {
+    background-image: url("/media/heropage_fotos/fundo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+img. {
+
+}
+
+nav { grid-area: nav; }
+
+main {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside {
+    grid-area: aside;
+}
+
+.vertical-line {
+    position: relative;
+    height: 65%;
+    width: 1px;
+    background: white;
+    opacity: 0.4;
+}
+
+.contentor {
+    display: grid;
+    height: 100%;
+
+    grid-template-areas:
+        'nav main aside';
+
+    gap: 10px;
+    padding: 10px;
+
+    grid-template-columns: 4fr 1fr 4fr;
+}
+
+.box2 {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 35%;
+    gap: 50px;
+
+}
+
+.title {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    left: 33%;
+    top: 43%;
+}
+
+.box1 > img {
+    display: flex;
+    position: absolute;
+    left: 35%;
+    top: 30%;
+
+}
+
+.box2 > img {
+    border: 1px solid yellow;
+    border-radius: 8px;
+}
+
+.continue-box {
+    background-color:white;
+    height:30px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+#entrance {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+
+/*
+.contentor > * {
+    border: 1px solid black;
+}*/

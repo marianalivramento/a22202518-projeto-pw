@@ -1,0 +1,64 @@
+body {
+    background-image: url('/media/aboutme_fotos/paint.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.arrow {
+    padding-top: 55px;
+}
+
+.first-row-main {
+    display: flex;
+    flex-direction: row;
+}
+
+#phones {
+     display: flex;
+     position: absolute;
+     right: 12%;
+     gap: 50px
+}
+
+#figures {
+     display: flex;
+     position: absolute;
+     left: 12%;
+     gap: 50px
+}
+
+.exp {
+    padding: 80px;
+}
+
+
+main { grid-area: main; }
+
+nav { grid-area: nav; }
+
+aside { grid-area: aside; }
+
+footer { grid-area: footer; }
+
+
+.grid {
+    display: grid;
+    height: auto;
+
+    grid-template-areas:
+        'header main'
+        'nav   aside';
+
+    gap: 10px;
+
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+/*
+.grid > * {
+    border: 1px solid black;
+}
+*/

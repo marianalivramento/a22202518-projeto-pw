@@ -1,0 +1,51 @@
+<html>
+    {% if request.user.is_authenticated %}
+    <head>
+        <title>Tempo em Lisboa</title>
+        <link rel="stylesheet" href="/static/meteo/estilos.css">
+
+        <style>
+            {% block style %}
+            {% endblock %}
+        </style>
+
+    </head>
+
+    <script>
+        function changeBackground_green() {
+            document.body.style.backgroundImage = "url('/media/meteo_fotos/green.png')";
+        }
+
+        function changeBackground_red() {
+            document.body.style.backgroundImage = "url('/media/meteo_fotos/red.png')" // Replace with the new image path
+        }
+    </script>
+
+    <body>
+        <div class="tempo">
+
+            <h2>And for the day {{ previsao.data.1.forecastDate}}</h2>
+
+            {% for i in frases.data %}
+                {% if i.idWeatherType == previsao.data.1.idWeatherType %}
+                    <p>{{ i.descWeatherTypeEN }}</p>
+                    <img src="/static/meteo/icons_ipma_weather/w_ic_d_1{{i.idWeatherType}}anim.svg" width="300px">
+                {% endif %}
+            {% endfor %}
+
+            <h3>Some addition information for free:</h3>
+
+            <p>Min: {{ previsao.data.1.tMin}}ºC, max: {{ previsao.data.1.tMax}}ºC</p>
+
+            <h3>Did you guess right?</h3>
+            <div class="box">
+                <button onclick="changeBackground_green()">Yes</button>
+                <button onclick="changeBackground_red()">No</button>
+            </div>
+        </div>
+
+    </body>
+    {%endif%}
+</html>
+
+

@@ -1,0 +1,20 @@
+[
+    {
+        "nome_do_docente": "DEISI Chess",
+        "descricao": "Criação um jogo de Xadrez!\nNa primeira parte deste projeto os alunos são desafiados a criar a lógica por trás deste jogo, sendo que vão começar apenas a jogar com Reis.\nNa segunda parte vão ser incorporadas as outras peças de maneira a completar este jogo.",
+        "conceitos_aplicados": "- diagramas UML\n-programação orientada a objetos de acordo com o teorema do encapsulamento",
+        "tecnologias_usadas": "-linguagens de programação Java e de Kotlin\n-testes em JUnit 5\n-criação de um repositório Git no GitHub",
+        "linguagens": [
+            {"linguagem": "Java"}
+        ]
+    },
+    {
+        "nome_do_docente": "Projeto 2",
+        "descricao": "Descrição 2",
+        "conceitos_aplicados": "",
+        "tecnologias_usadas": "",
+        "linguagens": [
+            {"linguagem": "Python"}
+        ]
+    }
+]

@@ -1,0 +1,52 @@
+[
+    {
+        "nome_banda": "Backstreet Boys",
+        "nacionalidade": "American",
+        "ano_de_criacao": 1993
+    },
+    {
+        "nome_banda": "Spice Girls",
+        "nacionalidade": "British",
+        "ano_de_criacao": 1994
+    },
+    {
+        "nome_banda": "NSYNC",
+        "nacionalidade": "American",
+        "ano_de_criacao": 1995
+    },
+    {
+        "nome_banda": "Destiny's Child",
+        "nacionalidade": "American",
+        "ano_de_criacao": 1997
+    },
+    {
+        "nome_banda": "Westlife",
+        "nacionalidade": "Irish",
+        "ano_de_criacao": 1998
+    },
+    {
+        "nome_banda": "S Club 7",
+        "nacionalidade": "British",
+        "ano_de_criacao": 1998
+    },
+    {
+        "nome_banda": "Hanson",
+        "nacionalidade": "American",
+        "ano_de_criacao": 1992
+    },
+    {
+        "nome_banda": "Atomic Kitten",
+        "nacionalidade": "British",
+        "ano_de_criacao": 1998
+    },
+    {
+        "nome_banda": "Steps",
+        "nacionalidade": "British",
+        "ano_de_criacao": 1997
+    },
+    {
+        "nome_banda": "Aqua",
+        "nacionalidade": "Danish",
+        "ano_de_criacao": 1989
+    }
+]

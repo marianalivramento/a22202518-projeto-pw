@@ -1,0 +1,102 @@
+<html>
+    {% if request.user.is_authenticated %}
+    <head>
+        <title>Web Programming Repository</title>
+        <link rel="stylesheet" href="/static/main/estilos.css">
+        <script src="https://kit.fontawesome.com/9ac24875f9.js" crossorigin="anonymous"></script>
+
+
+        <style>
+            {% block style %}
+            {% endblock %}
+        </style>
+    </head>
+
+    <script>
+        function changeImage() {
+            var img = document.getElementById("magicBall");
+            img.src = "/media/heropage_fotos/me.png"; // Replace with the new image path
+        }
+    </script>
+
+    <body>
+
+    <div class ="grid">
+
+        <header>
+            <div id="mariana">Mariana's Apartment 🚪</div>
+            <div class = "buttons">
+                <a href="{% url 'heropage:index' %}"><button>Home</button></a>
+                <button>About me</button>
+                <button>Extra</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="door"><img src="/media/main/door.png" width = "300px"></div>
+            <div class="main-box">
+                <h1><i>Welcome.</i></h1>
+                <h2>mY name is Mariana and this is the home of all my projects. Feel free to explore but please leave your shoes at the door</h2>
+            </div>
+            <center><img class="arrow" src="/media/main/arrow.png" width = "20px"></center>
+        </main>
+
+        <nav>
+            <h1><center><u>Apps i have developed for this class</u></center></h1>
+            <br>
+            <div class="app">
+                <div class="app-box">
+                    <img src="/media/main/bandas.png" width = "150px">
+                    <a href="{% url 'bandas:lista_de_bandas' %}">Bandas</a>
+                </div>
+
+                <div class="app-box">
+                    <img src="/media/main/notes.png" width = "150px">
+                    <a href="{% url 'artigos:index' %}">Artigos</a>
+                </div>
+
+                <div class="app-box">
+                    <img src="/media/main/curso.png" width = "150px">
+                    <a href="{% url 'curso:index' %}">Curso</a>
+                </div>
+            </div>
+
+            <center><img class="arrow" src="/media/main/arrow.png" width = "20px"></center>
+
+        </nav>
+
+        <aside>
+            <div id="game">
+                <h2>Feeling lucky?</h2>
+                What's the weather tomorrow?
+                <a href="{%url 'meteo:index' %}"><img src="/media/main/magic_ball.png" width = "250px"></a>
+                <center><u><i>Click on the ball to see the future</i></u></center>
+            </div>
+
+            <div id="bar"></div>
+
+            <div id="about-me">
+                <img src="/media/heropage_fotos/me.png" width = "350px">
+                <a href="{%url 'aboutme:aboutme' %}"><button>A little bit more about me</button></a>
+            </div>
+
+
+        </aside>
+        <footer>
+            <center><h3>Contact me</h3></center>
+            <div class= "socials">
+                <a href="https://www.linkedin.com/in/mariana-lopes-livramento/"><img src="/media/main/linkedin.png" width = "50px"></a>
+                <img src="/media/main/mail.png" width = "50px">
+                <a href="https://github.com/marianalivramento"><img src="/media/main/github.png" width = "50px"></a>
+            </div>
+        </footer>
+    </div>
+
+
+
+    </body>
+    {%endif%}
+</html>
+
+
+

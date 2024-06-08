@@ -1,0 +1,39 @@
+<html>
+    {% if request.user.is_authenticated %}
+    <head>
+        <title>Mariana's Desktop</title>
+        <link rel="stylesheet" href="/static/macos/estilos.css">
+
+        <style>
+            {% block style %}
+            {% endblock %}
+        </style>
+    </head>
+    <body>
+
+        <div class = "grid">
+            <header></header>
+            <main></main>
+            <aside>
+            </aside>
+            <footer>
+                <div class="bar">
+                    <div class = "space">
+                        <b><em> <img src="/media/main/windows.png" width = "20px">Start</em></b>
+                        <div class= "tempo">
+                            {% for i in frases.data %}
+                                {% if i.idWeatherType == previsao.data.0.idWeatherType %}
+                                    <img src="/static/meteo/icons_ipma_weather/w_ic_d_0{{i.idWeatherType}}.svg" width ="30px">
+                                {% endif %}
+                            {% endfor %}
+
+                            <p>{{ previsao.data.0.forecastDate}}</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </body>
+    {% endif %}
+</html>

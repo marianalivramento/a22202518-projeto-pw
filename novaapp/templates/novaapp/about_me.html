@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lana's Journal</title>
+    <style>
+        body {
+            background: CornflowerBlue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <center>
+        <h1>About me</h1>
+            <a href="{% url 'novaapp:index' %}">Index</a>
+            <span style="margin-right: 20px;"></span>
+            <a href="{% url 'novaapp:journal_entrances' %}">Journal entrances</a>
+            <span style="margin-right: 20px;"></span>
+            <a href="{% url 'novaapp:media' %}">Media</a>
+        </center>
+    </header>
+
+
+
+    <main>
+        <h2>Some facts about me:</h2>
+        <ul>
+            <li>I'm a black cat</li>
+            <li>I'm 9 years old</li>
+            <li>I don't like to be held</li>
+            <li>If you are a stranger i will run away from you</li>
+            <li>I don't know how to purr</li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Lana's Page, - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

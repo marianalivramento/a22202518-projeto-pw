@@ -1,0 +1,20 @@
+{% extends 'artigos/layout.html' %}
+
+{% block content %}
+    <style>
+        .errorlist {
+            display: none;
+        }
+    </style>
+
+    <h3>Edita Artigo</h3>
+
+    <form action="{% url 'artigos:edita_artigo' artigo.id %}" method="post" enctype='multipart/form-data'>
+      {% csrf_token %}
+      <table>
+        {{ form }}
+      </table>
+      <input type="submit">
+    </form>
+
+{% endblock %}

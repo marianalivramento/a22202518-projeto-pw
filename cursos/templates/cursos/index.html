@@ -1,0 +1,92 @@
+{% extends 'cursos/layout.html' %}
+
+{% block content %}
+
+    <div class = "contentor">
+
+        <main>
+            <div class = "rota">
+                <div id="code-icon">
+                    <h1>Engenharia Informática</h1>
+                    <i class="fa-solid fa-code fa-xl" style="color: #000000;"></i>
+                </div>
+            </div>
+            <p class="text">{{ curso.apresentacao|linebreaksbr }}</p>
+        </main>
+
+        <nav>
+            <div class = "nav-box1">
+                <div class = "description-title">Objetivos</div>
+            </div>
+
+            <div class = "nav-box2">
+                <div class = "description-title">Competências</div>
+            </div>
+
+        </nav>
+
+        <aside>
+            <div class = "aside-box1">
+                <div class = "description"><p>{{ curso.objetivos|safe|linebreaksbr }}</p></div>
+            </div>
+
+            <div class = "aside-box2">
+                <div class = "description"><p>{{ curso.competencias|safe|linebreaksbr }}</p></div>
+            </div>
+        </aside>
+
+        <footer>
+
+            <center><h1>Plano Curricular</h1></center>
+
+                <div class = "anos">
+                    <div class = "ano">
+                        <h3>1º Ano</h3>
+                        {% for disciplina in disciplinas %}
+                            {% if disciplina.ano == 1 %}
+
+                            <div class = "div1">
+                                <a href = "{% url 'curso:disciplina' disciplina.id %}">{{ disciplina.nome_da_disciplina }}</a>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+
+                    <div class = "ano">
+                        <h3>2º Ano</h3>
+                        {% for disciplina in disciplinas %}
+                            {% if disciplina.ano == 2 %}
+                            <div class = "div1">
+                                <a href = "{% url 'curso:disciplina' disciplina.id %}">{{ disciplina.nome_da_disciplina }}</a>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+
+                    <div class = "ano">
+                        <h3>3º Ano</h3>
+                        {% for disciplina in disciplinas %}
+                            {% if disciplina.ano == 3 %}
+                            <div class = "div1">
+                                <a href = "{% url 'curso:disciplina' disciplina.id %}">{{ disciplina.nome_da_disciplina }}</a>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+            </div>
+
+
+            <center><h1>Docentes</h1></center>
+                <div class="professor-index">
+                    {% for docente in docentes %}
+                        <a  class="professor-index-box" href = "{% url 'curso:professor' docente.id %}">
+                            <img class= "imagem" src='{{ docente.foto.url }}' width="200px">
+                            <p>{{ docente.nome_do_docente }}</p>
+                        </a>
+                    {% endfor %}
+                </div>
+        </footer>
+    </div>
+
+
+{% endblock %}

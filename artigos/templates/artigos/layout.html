@@ -1,0 +1,51 @@
+<html>
+    {% if request.user.is_authenticated %}
+    <head>
+        <title>BlogNest</title>
+        <link rel="stylesheet" href="/static/artigos/estilos.css">
+        <script src="https://kit.fontawesome.com/9ac24875f9.js" crossorigin="anonymous"></script>
+
+        <style>
+            {% block style %}
+            {% endblock %}
+        </style>
+    </head>
+    <body>
+        <div class="contentor">
+            <header>
+                <a class = "home-button" href="{% url 'autenticacao:index' %}"><button>Homepage</button></a>
+                BlogNest
+            </header>
+
+            <aside>
+                <div class = "list-of-contents">
+                    <div id = "contents">List of Contents:</div>
+                    <div><a href="{% url 'artigos:autores' %}"><button>Lista de Autores</button></a></div>
+                    <div><a href="{% url 'artigos:index' %}"><button>Lista de Artigos</button></a></div>
+                </div>
+
+            </aside>
+
+            <main>
+
+                {% if request.user.is_authenticated %}
+                    <b>Username:</b> {{request.user.username}}
+                    <a href="{% url 'autenticacao:logout' %}"><button>Logout</button></a>
+                {% else %}
+                    <a href="{% url 'autenticacao:login' %}"><button>Login</button></a>
+                    <a href="{% url 'autenticacao:registo' %}"><button>Registar</button></a>
+                {% endif %}
+
+
+                {% block content %}
+                {% endblock %}
+
+            </main>
+
+            <footer>
+                All the content in this webpage is AI generated
+            </footer>
+        </div>
+    </body>
+    {%endif%}
+</html>

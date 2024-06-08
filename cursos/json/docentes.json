@@ -1,0 +1,20 @@
+[
+    {
+        "nome_do_docente": "Maria",
+        "disciplinas": [
+            {"disciplina": "Fundamentos de Programação"}
+        ]
+    },
+    {
+        "nome_do_docente": "João",
+        "disciplinas": [
+            {"disciplina": "Disciplina 1"}
+        ]
+    },
+    {
+        "nome_do_docente": "Luis",
+        "disciplinas": [
+            {"disciplina": "Fundamentos de Programação"}
+        ]
+    }
+]

@@ -1,0 +1,33 @@
+{% extends 'cursos/layout.html' %}
+
+{% block content %}
+
+<div class ="contentor">
+            <main>
+                {{ professor.nome_do_docente }}
+            </main>
+
+            <nav>
+                <strong id="docente">Docentes</strong>
+                <div class = "professor nav-box2">
+                    {% if professor.foto %}
+                        <img src='{{ docente.foto.url }}' width="200px">
+                    {% endif %}
+                </div>
+            </nav>
+
+
+            <aside>
+                <div class="aside-box1">
+                    <h3>Disciplinas do docente:</h3>
+                    {% if disciplina.linguagens.all%}
+
+                        {{ disciplina.nome_da_disciplina }}
+                    {% endif %}
+                </div>
+            </aside>
+        </div>
+
+    </div>
+
+{% endblock %}

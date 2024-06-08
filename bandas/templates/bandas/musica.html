@@ -1,0 +1,17 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <header>
+        <h1 class="music-title">{{ musica.nome_musica }}</h1>
+    </header>
+    <main>
+        <div class="music-details">
+            <p><strong>Duração da música:</strong> {{ musica.duracao }} segundos</p>
+            {% if musica.link %}
+                <p><strong>Spotify link:</strong> <a href="{{ musica.link }}">{{ musica.link }}</a></p>
+            {% endif %}
+            <p><strong>Data de Lançamento:</strong> {{ musica.data_lancamento }}</p>
+            <p><strong>Banda:</strong> {{ musica.banda.nome_banda }}</p>
+        </div>
+    </main>
+{% endblock %}

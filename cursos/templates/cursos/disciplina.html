@@ -1,0 +1,86 @@
+{% extends 'cursos/layout.html' %}
+
+{% block content %}
+
+        <center><h2>{{ disciplina.nome_da_disciplina }}</h2></center>
+        <div class="disciplina-info">
+            <div><b>Ano:</b> {{disciplina.ano}}</div>
+            <div><b>Semeste:</b> {{disciplina.semestre}}</div>
+            <div><b>Ects:</b> {{disciplina.ects}}</div>
+
+        </div>
+
+        <div class ="contentor">
+            <main>
+                <div id="info-disciplina">{{ disciplina.apresentacao|safe|linebreaksbr }}</div>
+            </main>
+
+            <nav>
+                <strong id="docente">Docentes</strong>
+                <div class = "professor nav-box2">
+                    {% if disciplina.docentes.all|length > 0 %}
+
+                        {% for docente in disciplina.docentes.all %}
+                            {% if not forloop.last %}
+                                <img class= "imagem" src='{{ docente.foto.url }}' width="200px">
+                                <br>
+                                <b>{{ docente.nome_do_docente }},</b>
+                            {% else %}
+                                <img class= "imagem" src='{{ docente.foto.url }}' width="200px">
+                                <br>
+                                <b>{{ docente.nome_do_docente }}</b>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </nav>
+
+
+            <aside>
+                <div class="aside-box1">
+                    <h3>Linguagens de programação utilizadas:</h3>
+                    {% if disciplina.linguagens.all %}
+                        {% for linguagem in disciplina.linguagens.all %}
+                            <li>
+                                {{linguagem}}
+                            </li>
+                        {% endfor %}
+                    {% endif %}
+
+                    <h3>Projetos:</h3>
+                    {% if projetos %}
+                        {% for projeto in projetos %}
+                            <li id = "div1">
+                                <a href = "{% url 'curso:projeto' projeto.id %}"> {{projeto.nome_do_projeto}}</a>
+                            </li>
+                        {% endfor %}
+                    {% else %}
+                        <div class="projetos"> ❗ Ainda não existem projetos disponiveis  para esta disciplina  ❗ </div>
+                    {% endif %}
+                </div>
+            </aside>
+        </div>
+
+    </div>
+
+    {% comment %}
+
+        {% if request.user.is_authenticated %}
+                <a href="{% url 'curso:novo_docente' %}"><button>Adicione docente</button></a>
+        {% endif %}
+
+        {% if request.user.is_authenticated %}
+            {% if projetos|length == 0 %}
+                <a href="{% url 'curso:novo_projeto' disciplina.id %}"><button>Adicione Projeto</button></a>
+            {% endif %}
+        {% endif %}
+
+
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'curso:apaga_disciplina' disciplina.id %}"><button>Apagar Disciplina</button></a>
+            <a href="{% url 'curso:edita_disciplina' disciplina.id %}"><button>Editar disciplina</button></a>
+        {% endif %}
+
+    {% endcomment %}
+
+{% endblock %}

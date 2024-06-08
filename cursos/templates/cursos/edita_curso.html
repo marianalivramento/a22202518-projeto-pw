@@ -1,0 +1,20 @@
+{% extends 'cursos/layout.html' %}
+
+{% block content %}
+    <style>
+        .errorlist {
+            display: none;
+        }
+    </style>
+
+    <h3>Edita Curso</h3>
+
+    <form action="{% url 'curso:edita_curso' curso.id %}" method="post" enctype='multipart/form-data'>
+      {% csrf_token %}
+      <table>
+        {{ form }}
+      </table>
+      <input type="submit">
+    </form>
+
+{% endblock %}

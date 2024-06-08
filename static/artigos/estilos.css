@@ -1,0 +1,116 @@
+body {
+    background: lightblue;
+    color: white;
+}
+
+button {
+    font-size: 1rem;
+}
+
+#contents {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.home-button {
+    position: absolute;
+    top: 50px;
+    left: 35px;
+    padding: 10px 20px;
+
+}
+
+.pad {
+    padding: 20px;
+}
+
+
+
+div.contentor > * {
+    background-color: white;
+    opacity: 0.6;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+
+
+header {
+    grid-area: header;
+    color: black;
+    font-size: 5rem;
+    text-align: center;
+
+
+}
+
+nav { grid-area: nav; }
+
+main {
+    grid-area: main;
+    color: black;
+    font-size: 1rem;
+    background-color: lightpink;
+}
+
+aside {
+    grid-area: aside;
+    color: black;
+}
+
+footer {
+    grid-area: footer;
+    color: black;
+}
+
+
+div.contentor {
+    margin: 20px;
+    height: auto;
+    display: grid;
+    background-color: lightpink;
+    border-radius: 10px;
+
+
+    grid-template-areas:
+        'header header header'
+        'main main  aside'
+        'footer footer footer';
+
+        gap: 10px;
+        padding: 10px;
+
+        grid-template-columns: 20vw 3fr 2fr;
+        grid-template-rows: 15vh auto 60px;
+}
+
+@media(max-width: 600px) {
+    div.contentor {
+        height: auto;
+        grid-template-areas:
+            'header'
+            'menu'
+            'main'
+            'aside'
+            'footer';
+
+
+        grid-template-columns: auto;
+        grid-template-rows: 15vh 10vh 2fr 1fr 60px;
+    }
+}
+
+.list-of-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 100px;
+}
+
+
+
+
+

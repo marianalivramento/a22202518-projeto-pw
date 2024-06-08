@@ -1,0 +1,55 @@
+<html>
+    {% if request.user.is_authenticated %}
+    <head>
+        <title>Web Programming Repository</title>
+        <link rel="stylesheet" href="/static/autenticacao/estilos.css">
+        <script src="https://kit.fontawesome.com/9ac24875f9.js" crossorigin="anonymous"></script>
+
+        <style>
+            {% block style %}
+            {% endblock %}
+        </style>
+    </head>
+    <body>
+        <div class="contentor">
+            <header>
+                <h1 class="center-text">Mariana's Projects</h1>
+            </header>
+            <main>
+
+                {% if request.user.is_authenticated %}
+                    <i class="fa-solid fa-user fa-lg"></i> {{request.user.username}}
+                    <a href="{% url 'autenticacao:logout' %}"><button>Logout</button></a>
+                {% else %}
+                    <a href="{% url 'autenticacao:login' %}"><button>Login</button></a>
+                    <a href="{% url 'autenticacao:registo' %}"><button>Registo</button></a>
+                {% endif %}
+
+                {% block content %}
+                {% endblock %}
+
+            </main>
+
+
+            <aside>
+
+            </aside>
+            <div class="blue-bar">
+                <div class = "space">
+                    <b><em> <img src="/media/main/windows.png" width = "20px">Start</em></b>
+                    <div class= "tempo">
+                        {% for i in frases.data %}
+                            {% if i.idWeatherType == previsao.data.0.idWeatherType %}
+                                <img src="/static/meteo/icons_ipma_weather/w_ic_d_0{{i.idWeatherType}}.svg" width ="30px">
+                            {% endif %}
+                        {% endfor %}
+
+                        <p>{{ previsao.data.0.forecastDate}}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    {%endif%}
+</html>

@@ -1,0 +1,83 @@
+body {
+    background-image: url("/media/main/peanut.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+* {
+    font-family: "Helvetica Neue";
+}
+
+/*
+.title {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size:4rem;
+    padding-top: 15%;
+}
+*/
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 4rem;
+    padding-top: 20%;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.dot {
+    color: #b8860b;
+}
+
+#entrance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    letter-spacing: 1px;
+    font-style: italic;
+    gap: 130px;
+    padding-left: 5%;
+}
+
+
+#bell {
+    margin-top: 1rem;
+    transition: transform 1s;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#bell:hover {
+    transform: scale(1.5);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 3rem;
+        padding-top: 20%;
+    }
+
+    #entrance {
+        padding-left: 10%;
+        padding-right: 10%;
+        flex-direction: column;
+    }
+}
+

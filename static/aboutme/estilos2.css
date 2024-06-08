@@ -1,0 +1,94 @@
+* {
+    font-family: "Helvetica Neue";
+    margin: 0;
+}
+
+#imagem-m {
+    border-radius: 10px;
+    padding-top: 20%;
+}
+
+
+.barra {
+    width: 50%;
+    height: 1px;
+    opacity: 0.9;
+    background-color: black;
+    margin: 20%;
+}
+
+.box {
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+    text-align: center;
+
+}
+
+main {
+    grid-area: main;
+    background-color: #F89880;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+nav {
+    grid-area: nav;
+    background-color: #FBCEB1;
+}
+
+#iphone {
+    display: flex;
+    flex-direction: row;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #F89880;
+}
+
+
+.grid {
+    display: grid;
+    height: auto;
+
+    grid-template-areas:
+        'main nav aside'
+        'main nav aside';
+
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+
+}
+
+@media (max-width: 600px) {
+    .grid {
+        height: auto;
+        grid-template-areas:
+            'main'
+            'nav'
+            'aside';
+
+
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+

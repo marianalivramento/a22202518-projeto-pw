@@ -1,0 +1,74 @@
+body {
+    background: #9EB6D7;
+    color: black;
+}
+
+.text {
+    padding: 20px;
+}
+
+.titulo {
+    background-color: pink;
+    width: 400px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+a:link {color: black; }
+a:visited {color: purple; }
+
+h2 {
+    padding: 20px;
+}
+
+.disciplina-info {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.projetos {
+    color: darkred;
+}
+
+
+header {
+    grid-area: header;
+}
+
+
+main {
+    grid-area: main;
+    text-align: justify;
+    border-radius: 20px;
+}
+
+nav { grid-area: nav; }
+
+aside { grid-area: aside; }
+
+footer { grid-area: footer; }
+
+
+.contentor {
+    margin: 10px;
+    height: auto;
+    display: grid;
+
+    grid-template-areas:
+        'header header header'
+        'main main  aside'
+        'footer footer footer';
+
+        gap: 10px;
+        padding: 10px;
+
+        grid-template-columns: 20vw 3fr 2fr;
+        grid-template-rows: 15vh 15vh auto;
+}
+
+.professor {
+    display: flex;
+    flex-direction: column;
+}
+

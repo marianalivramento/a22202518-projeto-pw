@@ -1,0 +1,29 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <header>
+        <h1 class="album-title">{{ album.nome_album }}</h1>
+    </header>
+    <main>
+        <div class="album-details">
+            <div class="album-cover-container">
+                <img src="{{ album.capa.url }}" alt="{{ album.nome_album }} cover" class="album-cover" width="400px">
+            </div>
+            <div class="album-info">
+                <p><strong>Ano de Lançamento:</strong> {{ album.ano_de_lancamento }}</p>
+                <p><strong>Duração do álbum:</strong> {{ album.duracao_album }} minutos</p>
+            </div>
+        </div>
+        <div class="album-tracks">
+            <h2>Faixas</h2>
+            <ul>
+                {% load bandas_extras %}
+                {% for musica in album|musicas_ordenadas %}
+                    <li>
+                        <a href="{% url 'bandas:musica' musica.id %}">{{ musica.nome_musica }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+{% endblock %}
